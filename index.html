@@ -1,0 +1,162 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Student Registration Form</title>
+  <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+  <header>
+    <h1>Student Registration Form</h1>
+    <p>Please fill out the form carefully and accurately.</p>
+  </header>
+
+  <main>
+    <form class="registration-form" action="#" method="post">
+      <!-- Personal Information -->
+      <fieldset>
+        <legend>Personal Information</legend>
+        <div class="form-group">
+          <label for="fname">First Name:</label>
+          <input type="text" id="fname" name="fname" placeholder="Enter your first name" required>
+        </div>
+
+        <div class="form-group">
+          <label for="lname">Last Name:</label>
+          <input type="text" id="lname" name="lname" placeholder="Enter your last name" required>
+        </div>
+
+        <div class="form-group">
+          <label for="studentid">Student ID:</label>
+          <input type="text" id="studentid" name="studentid" placeholder="e.g., 23F-1234" required>
+        </div>
+
+        <div class="form-group">
+          <label for="program">Program / Department:</label>
+          <select id="program" name="program" required>
+            <optgroup label="Undergraduate">
+              <option>Bachelor of Computer Science</option>
+              <option>Bachelor of Software Engineering</option>
+            </optgroup>
+            <optgroup label="Postgraduate">
+              <option>MS Computer Science</option>
+              <option>MS Artificial Intelligence</option>
+            </optgroup>
+          </select>
+        </div>
+
+        <div class="form-group">
+          <label for="year">Year / Semester:</label>
+          <select id="year" name="year" required>
+            <option>1st Year - Fall</option>
+            <option>1st Year - Spring</option>
+            <option>2nd Year - Fall</option>
+            <option>2nd Year - Spring</option>
+            <option>3rd Year - Fall</option>
+            <option>3rd Year - Spring</option>
+            <option>4th Year - Fall</option>
+            <option>4th Year - Spring</option>
+          </select>
+        </div>
+
+        <div class="form-group">
+          <label for="dob">Date of Birth:</label>
+          <input type="date" id="dob" name="dob" required>
+        </div>
+
+        <div class="form-group">
+          <label>Gender:</label>
+          <label><input type="radio" name="gender" value="male" required> Male</label>
+          <label><input type="radio" name="gender" value="female"> Female</label>
+          <label><input type="radio" name="gender" value="other"> Other</label>
+        </div>
+      </fieldset>
+
+      <!-- Contact Information -->
+      <fieldset>
+        <legend>Contact Information</legend>
+        <div class="form-group">
+          <label for="email">Email:</label>
+          <input type="email" id="email" name="email" placeholder="Enter your email" required>
+        </div>
+
+        <div class="form-group">
+          <label for="phone">Phone:</label>
+          <input type="tel" id="phone" name="phone" placeholder="+92-3XX-XXXXXXX" required>
+        </div>
+
+        <div class="form-group full-width">
+          <label for="address">Address:</label>
+          <textarea id="address" name="address" rows="3" placeholder="Enter your full address" required></textarea>
+        </div>
+      </fieldset>
+
+      <!-- Enrollment Details -->
+      <fieldset>
+        <legend>Enrollment Details</legend>
+        <div class="form-group">
+          <label>Enrollment Type:</label>
+          <label><input type="radio" name="enroll" value="full" required> Full-time</label>
+          <label><input type="radio" name="enroll" value="part"> Part-time</label>
+        </div>
+
+        <div class="form-group full-width">
+          <label>Courses to Register:</label>
+          <label><input type="checkbox" name="course" value="web"> Web Engineering</label>
+          <label><input type="checkbox" name="course" value="dbms"> DBMS</label>
+          <label><input type="checkbox" name="course" value="os"> Operating Systems</label>
+          <label><input type="checkbox" name="course" value="ai"> Artificial Intelligence</label>
+        </div>
+
+        <div class="form-group">
+          <label for="campus">Preferred Campus:</label>
+          <input list="campus-list" id="campus" name="campus" placeholder="Select or type campus">
+          <datalist id="campus-list">
+            <option value="Islamabad Main Campus">
+            <option value="Karachi Campus">
+            <option value="Lahore Campus">
+          </datalist>
+        </div>
+
+        <div class="form-group">
+          <label for="photo">Profile Photo:</label>
+          <input type="file" id="photo" name="photo" accept="image/*">
+        </div>
+      </fieldset>
+
+      <!-- Account Setup -->
+      <fieldset>
+        <legend>Account Setup</legend>
+        <div class="form-group">
+          <label for="password">Password:</label>
+          <input type="password" id="password" name="password" pattern=".{8,}" placeholder="At least 8 characters" required>
+        </div>
+
+        <div class="form-group">
+          <label for="confirm">Confirm Password:</label>
+          <input type="password" id="confirm" name="confirm" placeholder="Re-enter password" required>
+        </div>
+      </fieldset>
+
+      <!-- Agreement -->
+      <fieldset>
+        <legend>Confirmation</legend>
+        <label class="full-width">
+          <input type="checkbox" name="terms" required> I agree to the terms and conditions.
+        </label>
+      </fieldset>
+
+      <!-- Buttons -->
+      <div class="buttons">
+        <button type="submit">Submit</button>
+        <button type="reset" class="reset">Reset</button>
+      </div>
+    </form>
+  </main>
+
+  <footer>
+    <p>&copy; 2025 Web Engineering | NUST</p>
+  </footer>
+</body>
+</html>
